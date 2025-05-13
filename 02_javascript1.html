@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript1</title>
+</head>
+<body>
+    <script>
+    // Ek global variable banaya gaya hai jiska naam hai 'data'
+    // Iski value 200 set ki gayi hai
+    var data = 200;
+
+    // Function 'a' define kiya gaya hai
+    function a() {
+        // 'data' variable ki value ko HTML page par print karega
+        // 'document.writeln' ek new line ke saath likhta hai
+        document.writeln(data);
+    }
+
+    // Dusra function 'b' define kiya gaya hai
+    function b() {
+        // Ye bhi 'data' variable ki value ko print karega
+        // 'document.write' bina new line ke likhta hai
+        document.write(data);
+    }
+    document.body.style.textAlign = "center";
+    // Function 'a' ko call kiya gaya hai
+    a(); // javascript function call ho raha hai
+    document.write("<hr>")
+    // Function 'b' ko call kiya gaya hai
+    b(); // javascript function call ho raha hai
+</script>
+
+</body>
+</html>
