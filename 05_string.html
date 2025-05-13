@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Example</title>
+</head>
+<body>
+    <script>
+        document.body.style.textAlign = "center";
+        // Yaha hum String object ka use karke ek string create kar rahe hain
+        var stringName = new String("Hello javaScript String !!");
+        document.writeln(stringName); // Output karega: Hello javaScript String !!
+        document.writeln("<br>");
+        document.writeln("<br>");
+
+        // 2nd Example:
+        // Yaha hum charAt() function ka use karke string ke ek specific character ko print kar rahe hain
+        var string = "javaScript";
+        document.writeln(string.charAt(3)); // Index 3 pe character 'a' hai
+        document.writeln("<br>");
+        document.writeln("<br>");
+
+        // 3rd Example:
+        // Do strings ko '+' operator se jod ke ek nayi string banayi gayi hai
+        var string1 = "Java Script";
+        var string2 = "= frontend & backend";
+        var string3 = string1 + string2; // Concatenation
+        document.writeln(string3); // Output: Java Script= frontend & backend
+
+        /////////////////////////////////////////////////
+
+        var msg = "JavaScript";
+
+        // 1. charAt()
+        console.log(msg.charAt(2)); // "v"
+
+        // 2. length
+        console.log(msg.length); // 10
+
+        // 3. toUpperCase()
+        console.log(msg.toUpperCase()); // "JAVASCRIPT"
+
+        // 4. concat()
+        var extra = " is fun!";
+        console.log(msg.concat(extra)); // "JavaScript is fun!"
+
+        // 5. slice()
+        console.log(msg.slice(0, 4)); // "Java"
+
+    </script>
+
+</body>
+</html>
