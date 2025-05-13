@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript2</title>
+</head>
+<body>
+
+    <script>
+        // Function 'm' ek global variable set karti hai window object ke through
+        function m() {
+            window.value = 100; // 'window' object ka use karke global variable declare kiya gaya hai
+        }
+
+        // Function 'n' us global variable ko access karke alert mein dikhata hai
+        function n() {
+            alert(window.value); // global variable ko access karke alert box mein show kiya gaya hai
+        }
+
+        // Yaha pe pehle m() ko call kiya gaya hai, jo 'value' global variable ko set karega
+        m();
+        
+        // Phir n() ko call karke 'value' ko alert mein dikhaya gaya hai
+        n();
+
+        ////////////////////////////////////////////////////////////////////
+        // Global variable set karne wala function
+        function youtub() {
+            window.youtub = "Welcome Youtub!!"; // Global variable 'youtub' ko set kiya gaya hai
+        }
+
+        // Alert show karne ke baad YouTube open karega
+        function youtub1() {
+            alert(window.youtub); // Pehle alert dikhayega jo 'youtub' variable ka value dikhata hai
+            window.open("https://www.youtube.com"); // naye tab mein YouTube khol dega
+        }
+        
+        // Pehle youtub() function ko call karenge, jo global variable 'youtub' set karega
+        youtub();
+        
+        // Phir youtub1() ko call karenge jo alert dikhayega aur YouTube khol dega
+        youtub1();
+
+    </script>
+
+</body>
+</html>
