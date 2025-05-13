@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasted Loops</title>
+</head>
+<body>
+     <script>
+        document.body.style.textAlign = "center";
+        // Variable 'a' declare kiya gaya hai with value 20
+        var a = 20;
+
+        // if-else-if ladder ka use kiya gaya hai multiple conditions check karne ke liye
+        if (a == 10) {
+            document.write("a is equal to 10"); // Agar a 10 hai, toh yeh line print hogi
+        }
+        else if (a == 15) {
+            document.write("a is equal to 15"); // Agar a 15 hai, toh yeh line print hogi
+        }
+        else if (a == 20) {
+            document.write("A is equal to 20"); // Agar a 20 hai, toh yeh line print hogi
+        }
+        else {
+            document.write("a is not equal to 10, 15 or 20"); // Agar koi bhi condition match nahi hui toh yeh print hoga
+        }
+
+        //////////////////////////////////////////
+          // Step 1: Ek horizontal line draw karte hain page par
+        document.write("<hr>");
+
+        // Step 2: Ek variable banate hain jisme score store hoga
+        var score = 80; // yahan score 80 diya gaya hai
+
+        // Step 3: Condition check karte hain — agar score 50 se zyada hai to "pass"
+        if (score > 50) {
+            // Console mein output dikhate hain (developer ke liye)
+            console.log("pass = " + score);
+
+            // Webpage par bhi result likhte hain
+            document.write("pass = " + score);
+        }
+
+////////////////////////////////////////////////////////////
+            // Step 1: Ek horizontal line print karte hain webpage par
+            document.write("<hr>");
+
+            // Step 2: Age naam ka variable banate hain aur value assign karte hain
+            var age = 30; // Yahan age 30 hai
+
+            // Step 3: Condition check karte hain — kya age 18 ya usse zyada hai?
+            if (age >= 18) {
+                // Agar haan (true), to console aur webpage par "Subhendu" print karo
+                console.log("Subhendu");
+                document.write("Subhendu");
+            } else {
+                // Agar nahi (false), to console aur webpage par "Majhi" print karo
+                console.log("Majhi");
+                document.write("Majhi");
+            }
+
+            //////////////////////////////////////////////////////////////////////////
+             document.write("<hr>");
+            // Step 1: 'marks' naam ka variable banate hain
+            var marks = 85; // Yahan marks ki value 85 hai
+
+            // Step 2: Grade check karne ke liye if...else if...else ka use karte hain
+
+            // Agar marks 90 ya usse zyada hain to Grade A
+            if (marks >= 90) {
+                console.log("Grade A");
+                document.write("Grade A");
+            }
+
+            // Agar marks 75 ya usse zyada hain (but < 90) to Grade B
+            else if (marks >= 75) {
+                console.log("Grade B");
+                document.write("Grade B");
+            }
+
+            // Agar marks 75 se kam hain to Grade C
+            else {
+                console.log("Grade C");
+                document.write("Grade C");
+            }
+
+
+            ////////////////////////////////////////////////////////////////////////////////////
+            document.write("<hr>");
+
+                // Step 1: 'day' naam ka variable banate hain jisme din ka naam store karte hain
+                var day = "Monday";  // Yahan humne "Monday" assign kiya hai
+
+                // Step 2: switch statement start karte hain day ke value ke basis par
+                switch (day) {
+
+                // Case 1: Agar day "Monday" hai to ye block chalega
+                case "Monday":
+                    console.log("Start of week");          // Console mein message print hoga
+                    document.write("Start of week Monday");       // Webpage par bhi print hoga
+                    break;  // Break zaroori hai taaki next cases na chalein
+
+                // Case 2: Agar day "Friday" hai to ye block chalega
+                case "Friday":
+                    console.log("Weekend is near");
+                    document.write("Weekend is near");
+                    break;
+
+                // Default case: Agar day ka value upar ke kisi case se match nahi karta
+                default:
+                    console.log("Regular day");
+                    document.write("Regular day");
+            }
+
+///////////////////////////////////////////////////////////////////////////
+            document.write("<hr>");
+
+            // Step 1: Ek boolean variable banate hain jo batata hai user logged in hai ya nahi
+                var isLoggedIn = true;  // true ka matlab user login hai
+                // var isLoggedIn = false;  // true ka matlab user login hai
+
+                var message;
+
+                if(isLoggedIn){
+                    message = "Welcome Admin!!";
+                }else{
+                    message = "Place Login Now!!";
+                }
+                // Step 3: Console mein message print karte hain
+                console.log(message);
+
+                // Step 4: Webpage par bhi message dikhate hain
+                document.write(message);
+
+    </script>
+</body>
+</html>
