@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // Function 'msg' banayi gayi hai jo alert box show karti hai
+        function msg() {
+            alert("hello! this is message"); // Jab function call hoga, alert message pop-up hoga
+        }
+
+        function jobalert(){
+            alert("Welcome Best Job Site Now!!");
+            window.open("https://www.freejobalert.com");
+
+        }
+    </script>
+
+    <!-- Button banaya gaya hai, jisko click karne par 'msg()' function call hota hai -->
+    <input type="button" onclick="msg()" value="Click Me">
+    <input type="button" onclick="jobalert()" value="Visit Job Site">
+
+
+    <!-- ///////////////////////////////////////////// -->
+    <select onchange="changed()">
+    <option value="One">One</option>
+    <option value="Two">Two</option>
+</select>
+
+<script>
+    function changed() {
+        alert("Value change ho gayi!");
+    }
+</script>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+
+<input type="text" onkeydown="keyPressed()">
+
+<script>
+    function keyPressed() {
+        alert("Koi key dabayi gayi!");
+    }
+</script>
+
+
+</body>
+</html>
