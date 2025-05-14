@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Statement</title>
+</head>
+<body>
+    <script>
+    var grade = 'E'; // Declare a variable 'grade' with value 'E'
+    var result;      // Declare a variable to store the result message
+
+    // Use switch-case to check grade
+    switch (grade) {
+        case 'A': // If grade is 'A'
+            result = "A Grade";
+            break; // Exit switch after matching case
+        case 'B': // If grade is 'B'
+            result = "B Grade";
+            break;
+        case 'C': // If grade is 'C'
+            result = "C Grade";
+            break;
+        default:  // If grade does not match any case
+            result = "No Grade";
+    }
+
+    document.write(result); // Display the result
+</script>
+
+<script>
+    var grade = 'E';
+    var result;
+
+    if (grade === 'A') {
+        result = "A Grade";
+    } else if (grade === 'B') {
+        result = "B Grade";
+    } else if (grade === 'C') {
+        result = "C Grade";
+    } else {
+        result = "No Grade";
+    }
+
+    document.write(result);
+</script>
+
+<script>
+    var grade = 'E';
+
+    var result = (grade === 'A') ? "A Grade" :
+                 (grade === 'B') ? "B Grade" :
+                 (grade === 'C') ? "C Grade" :
+                 "No Grade";
+
+    document.write(result);
+</script>
+
+<script>
+    var grade = 'E';
+    var grades = {
+        'A': 'A Grade',
+        'B': 'B Grade',
+        'C': 'C Grade'
+    };
+
+    var result = grades[grade] || "No Grade"; // Use 'No Grade' if key not found
+    document.write(result);
+</script>
+
+<script>
+    function getGradeResult(grade) {
+        if (grade === 'A') return "A Grade";
+        if (grade === 'B') return "B Grade";
+        if (grade === 'C') return "C Grade";
+        return "No Grade";
+    }
+
+    var result = getGradeResult('E');
+    document.write(result);
+</script>
+
+
+
+
+
+
+</body>
+</html>
