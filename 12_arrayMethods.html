@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JavaScrip</title>
+</head>
+<body>
+    <script>
+        document.body.style.textAlign ="center";
+    // --------------------------
+    // 1st Method: Literal Notation
+    // --------------------------
+    var employee = ["Sonu", "Vimal", "Ramesh"]; // Create an array using literal notation
+    for (var i = 0; i < employee.length; i++) {
+        document.writeln(employee[i] + ".<br>"); // Print each employee's name
+    }
+
+    document.writeln("<br>"); // Line break between outputs
+
+    // ---------------------------------
+    // 2nd Method: Using new Array() and assigning values one by one
+    // ---------------------------------
+    var employee = new Array(); // Create an empty array using constructor
+    employee[0] = "Arun";       // Assign values to array positions
+    employee[1] = "Varun";
+    employee[2] = "Suresh";
+    employee[3] = "Kamal";
+
+    for (i = 0; i < employee.length; i++) {
+        document.writeln(employee[i] + ".<br>"); // Print each employee's name
+    }
+
+    document.writeln("<br>");
+
+    // ---------------------------------
+    // 3rd Method: Using new Array() with values directly
+    // ---------------------------------
+    var employee = new Array("Jay", "Sanjay", "Smith"); // Create array with values at once
+
+    for (i = 0; i < employee.length; i++) {
+        document.writeln(employee[i] + ".<br>"); // Print each employee's name
+    }
+
+
+    ////////////////////////////////////////////////////
+//     var i = 0;
+// do {
+//     document.writeln(employee[i] + "<br>");
+//     i++;
+// } while (i < employee.length);
+
+</script>
+
+</body>
+</html>
