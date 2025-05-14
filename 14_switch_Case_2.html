@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch Case statement</title>
+</head>
+<body>
+    <script>
+        document.body.style.textAlign ="center";
+    var grade = 'E';  // Declare a variable 'grade' and initialize it with 'E'
+    // var result = "";   // Initialize 'result' as an empty string to store the final message
+    var result;  // Initialize 'result' as an empty string to store the final message
+
+    // Use switch-case to determine the grade and append the corresponding message
+    switch (grade) {
+        case 'A':  // If grade is 'A'
+            result += " A Grade";  // Append " A Grade" to the result
+            break;  // Exit the switch after matching this case
+        case 'B':  // If grade is 'B'
+            result += " B Grade";  // Append " B Grade" to the result
+            break;  // Exit the switch after matching this case
+        case 'C':  // If grade is 'C'
+            result += " C Grade";  // Append " C Grade" to the result
+            break;  // Exit the switch after matching this case
+        default:   // If grade does not match 'A', 'B', or 'C'
+            result += " No Grade";  // Append " No Grade" to the result
+    }
+
+    // Display the result
+    document.write(result);  // Print the final result to the web page
+</script>
+
+<script>
+    document.write("<hr>");
+    var grade = 'E';
+    var result ;  // Initialize 'result'
+
+    // Use if-else to check the grade and append the corresponding message
+    if (grade === 'A') {
+        result += " A Grade";
+    } else if (grade === 'B') {
+        result += " B Grade";
+    } else if (grade === 'C') {
+        result += " C Grade";
+    } else {
+        result += " No Grade";  // Default message if no match
+    }
+
+    document.write(result);  // Display the result
+</script>
+
+<script>
+    document.write("<hr>");
+    var grade = 'E';
+
+    // Use a nested ternary operator to assign the result
+    var result = (grade === 'A') ? " A Grade" :
+                 (grade === 'B') ? " B Grade" :
+                 (grade === 'C') ? " C Grade" :
+                 " No Grade";  // Default message if no match
+
+    document.write(result);  // Display the result
+</script>
+
+<script>
+    document.write("<hr>");
+    var grade = 'E';
+    var gradeLookup = {
+        'A': ' A Grade',
+        'B': ' B Grade',
+        'C': ' C Grade'
+    };
+
+    // Use the grade as a key to look up the message, default to "No Grade"
+    var result = gradeLookup[grade] || " No Grade";
+
+    document.write(result);  // Display the result
+</script>
+
+<script>
+    document.write("<hr>");
+    function getGradeMessage(grade) {
+        if (grade === 'A') return " A Grade";
+        if (grade === 'B') return " B Grade";
+        if (grade === 'C') return " C Grade";
+        return " No Grade";  // Default if no match
+    }
+
+    var result = getGradeMessage('E');
+    document.write(result);  // Display the result
+</script>
+
+<script>
+    document.write("<hr>");
+    var grade = 'E';
+    var gradeList = [' A Grade', ' B Grade', ' C Grade'];
+    var index = ['A', 'B', 'C'].indexOf(grade);
+
+    // Use array index to get the corresponding grade, default to "No Grade" if not found
+    var result = index !== -1 ? gradeList[index] : " No Grade";
+    document.write(result);  // Display the result
+</script>
+
+
+
+
+
+
+</body>
+</html>
