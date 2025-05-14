@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <script>
+        document.body.style.textAlign = "center";
+    var i = 21; // Initialize variable i with 21
+
+    // Start of do-while loop
+    do {
+        document.write(i + "<br>"); // Print the value of i followed by a line break
+        i++; // Increment i by 1
+    } while (i <= 25); // Continue the loop while i is less than or equal to 25
+</script>
+
+<script>
+    // Ek horizontal line draw karne ke liye
+    document.write("<hr>");
+
+    // i variable ki starting value 21 rakhi gayi hai
+    var i = 21;
+
+    // Jab tak i ki value 25 se choti ya barabar hai, tab tak loop chalega
+    while (i <= 25) {
+        // Har iteration mein i ki value print hogi aur uske baad ek line break aayega
+        document.write(i + "<br>");
+        // i ki value 1 se badhayi ja rahi hai har baar
+        i++;
+    }
+</script>
+
+
+<script>
+    // Ek horizontal line draw karne ke liye
+    document.write("<hr>");
+
+    // For loop ka use kiya gaya hai jismein:
+    // i ki starting value 21 hai,
+    // condition hai ki jab tak i 25 se chota ya barabar ho,
+    // aur har baar loop ke baad i ki value 1 se badh jayegi
+    for (var i = 21; i <= 25; i++) {
+        // Har iteration mein i ki value print hogi aur ek new line (br) lagega
+        document.write(i + "<br>");
+    }
+</script>
+
+<script>
+    // Ek horizontal line draw karne ke liye
+    document.write("<hr>");
+
+    // Ye ek array hai jismein numbers 21 se 25 tak diye gaye hain
+    [21, 22, 23, 24, 25].forEach(function(i) {
+        // forEach har element (yahan i) ke liye ye function run karega
+        // Har number print hoga aur uske baad ek line break aayega
+        document.write(i + "<br>");
+    });
+</script>
+
+
+<script>
+    // Ek horizontal line draw karte hain
+    document.write("<hr>");
+
+    // Yahan hum .map ka use kar rahe hain lekin sirf print karne ke liye
+    // .map normally ek naya array return karta hai, lekin yahan return ka use nahi ho raha
+    [21, 22, 23, 24, 25].map(function(i) {
+        // Har number ko print kar rahe hain aur ek line break de rahe hain
+        document.write(i + "<br>");
+    });
+</script>
+
+
+<script>
+    // Ek horizontal line draw karte hain
+    document.write("<hr>");
+
+    // Ek function banaya hai jo number ko print karega
+    function printNumber(i) {
+        // Agar number 25 se bada ho gaya toh recursion stop ho jayega
+        if (i > 25) return;
+
+        // Current number print karo aur ek line break do
+        document.write(i + "<br>");
+
+        // Khud ko dobara call karo next number ke saath
+        printNumber(i + 1);
+    }
+
+    // Function ko call kiya hai starting value 21 ke saath
+    printNumber(21);
+</script>
+
+
+</body>
+</html>
