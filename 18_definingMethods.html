@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defining Methods</title>
+</head>
+
+<body>
+    <script>
+        document.body.style.textAlign ="center";
+        // Constructor function 'emp' define ki gayi hai
+        function emp(id, name, salary) {
+            this.id = id;               // id property assign
+            this.name = name;           // name property assign
+            this.salary = salary;       // salary property assign
+
+            // Method define kiya gaya salary change karne ke liye
+            this.changeSalary = changeSalary;
+
+            // Method ka actual function
+            function changeSalary(otherSalary) {
+                this.salary = otherSalary; // Yeh line kaam nahi karegi correctly because 'this' yahan function context ka hai
+            }
+        }
+
+        e = new emp(103, "Riya Gorai", 65000);
+        document.writeln(e.id + "</br>" + e.name + "</br>" + e.salary + "</br>");
+
+        e.changeSalary("79000/-"); // Salary update karne ki koshish
+        document.write("</br></br>" + e.id + "</br>" + e.name + "</br>" + e.salary + "</br>");
+    </script>
+
+    <script>
+        document.write("<hr>");
+    function Student(name, grade) {
+        this.name = name;
+        this.grade = grade;
+
+        this.updateGrade = function(newGrade) {
+            this.grade = newGrade;
+        };
+    }
+
+    let s = new Student("Ankit", "B");
+    s.updateGrade("A");
+    document.write(s.name + "<br>" + s.grade + "<br>");
+</script>
+
+<script>
+    document.write("<hr>");
+    function Book(title, pages) {
+        this.title = title;
+        this.pages = pages;
+
+        this.setPages = function(newPages) {
+            this.pages = newPages;
+        };
+    }
+
+    let b = new Book("The Alchemist", 200);
+    b.setPages(250);
+    document.write(b.title + "<br>" + b.pages + "<br>");
+</script>
+
+
+<script>
+    document.write("<hr>");
+    function Car(model, price) {
+        this.model = model;
+        this.price = price;
+
+        this.updatePrice = function(newPrice) {
+            this.price = newPrice;
+        };
+    }
+
+    let c = new Car("Swift", "6 Lakh");
+    c.updatePrice("6.5 Lakh");
+    document.write(c.model + "<br>" + c.price + "<br>");
+</script>
+
+<script>
+    document.write("<hr>");
+    function Movie(name, year) {
+        this.name = name;
+        this.year = year;
+
+        this.setYear = function(newYear) {
+            this.year = newYear;
+        };
+    }
+
+    let m = new Movie("Dangal", 2016);
+    m.setYear(2017);
+    document.write(m.name + "<br>" + m.year + "<br>");
+</script>
+
+<script>
+     document.write("<hr>");
+    function Product(name, category) {
+        this.name = name;
+        this.category = category;
+
+        this.changeCategory = function(newCategory) {
+            this.category = newCategory;
+        };
+    }
+
+    let p = new Product("Shampoo", "Cosmetics");
+    p.changeCategory("Personal Care");
+    document.write(p.name + "<br>" + p.category + "<br>");
+</script>
+
+
+</body>
+
+</html>
