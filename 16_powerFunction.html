@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power function</title>
+</head>
+<body>
+    <script>
+        document.body.style.textAlign = "center";
+        // Ek new Function banayi gayi hai jismein 2 parameters hain: num1 aur num2
+        // Math.pow(num1, num2) ka matlab hai num1 ki power num2
+        // Example: 10^2 = 100
+        var power = new Function("num1", "num2", "return Math.pow(num1,num2)");
+
+        // Ab is power function ko 10 aur 2 ke saath call kiya ja raha hai
+        // Result ko directly HTML page pe print kiya gaya hai using document.write
+        document.write(power(10, 2)); // Output hoga: 100
+    </script>
+</body>
+</html>
