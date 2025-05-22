@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+        <script>
+            document.body.style.textAlign = "center";
+        // Constructor function banayi gayi hai 'emp' naam se
+        function emp(id, name, salary) {
+            this.id = id;           // 'this.id' ka matlab object ka id property
+            this.name = name;       // 'this.name' - employee ka naam store karta hai
+            this.salary = salary;   // 'this.salary' - employee ki salary
+        }
+
+        // Ek object create kiya gaya using 'new' keyword
+        employee = new emp(103, "Riya Gorai", "34,000/-");
+        // Object ke properties print ki gayi HTML par
+        document.writeln(employee.id + "</br>" + employee.name + "</br>" + employee.salary + "</br>");
+
+        // Dusra object create kiya gaya
+        employee2 = new emp(104, "Riya Gorai", "30,000/-");
+        // Uski details bhi print ki gayi
+        document.writeln(employee2.id + "</br>" + employee2.name + "</br>" + employee2.salary + "</br>");
+    </script>
+
+    <script>
+        document.write("<hr>");
+    function Student(roll, name, grade) {
+        this.roll = roll;
+        this.name = name;
+        this.grade = grade;
+    }
+
+    let s1 = new Student(1, "Ankit", "A");
+    document.writeln(s1.roll + "<br>" + s1.name + "<br>" + s1.grade + "<br>");
+</script>
+
+<script>
+    document.write("<hr>");
+    function Car(model, brand, price) {
+        this.model = model;
+        this.brand = brand;
+        this.price = price;
+    }
+
+    let car1 = new Car("i20", "Hyundai", "8 Lakh");
+    document.writeln(car1.model + "<br>" + car1.brand + "<br>" + car1.price + "<br>");
+</script>
+
+<script>
+    document.write("<hr>");
+    function Book(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    let b1 = new Book("Wings of Fire", "A.P.J. Abdul Kalam", 180);
+    document.writeln(b1.title + "<br>" + b1.author + "<br>" + b1.pages + "<br>");
+</script>
+
+<script>
+      document.write("<hr>");
+    function Movie(name, director, year) {
+        this.name = name;
+        this.director = director;
+        this.year = year;
+    }
+
+    let m1 = new Movie("3 Idiots", "Rajkumar Hirani", 2009);
+    document.writeln(m1.name + "<br>" + m1.director + "<br>" + m1.year + "<br>");
+</script>
+
+<script>
+ document.write("<hr>");
+    
+    function Product(name, category, price) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+    }
+
+    let p1 = new Product("Laptop", "Electronics", "50,000/-");
+    document.writeln(p1.name + "<br>" + p1.category + "<br>" + p1.price + "<br>");
+</script>
+
+
+
+</body>
+</html>
